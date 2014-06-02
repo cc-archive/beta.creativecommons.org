@@ -1,7 +1,26 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>{{ page.title }} | Creative Commons</title>
-<link rel="stylesheet" type="text/css" href="/style.css" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/ico/favicon.png">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/jumbotron.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
 	{% if page.downloadurl %}
 		{% if page.repourl %}
 			<style>#downloadbuttonholder { width: 440px; }</style>
@@ -21,9 +40,12 @@
 	{% endif %}
 
 </head>
-<body>
+  
 
-{% include header.html %}
+  <body>
+    {% include header.html %}
+
+    <div class="container">
 
 <h1><a href="/">Creative Commons Resource Archive</a></h1>
 
@@ -98,6 +120,7 @@
 		{% endif %}
 	{% endif %}
 
+</div>
 
 </body>
 </html>
