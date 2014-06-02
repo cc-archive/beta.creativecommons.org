@@ -17,4 +17,4 @@ author: Creative Commons Aotearoa New Zealand
 license: CC BY 3.0
 ---
 
-A quick video on the basics of Creative Commons. Downloadable from "Vimeo"://vimeo.com/25684782 and "Internet Archive"://archive.org/details/CreativecommonsKiwi.
+A quick video on the basics of Creative Commons. Downloadable from [Vimeo](https://vimeo.com/25684782) and [Internet Archive](https://archive.org/details/CreativecommonsKiwi).
