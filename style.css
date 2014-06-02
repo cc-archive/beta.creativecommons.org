@@ -123,3 +123,26 @@ height: 50px;
 background-image: url(/images/cc-green-210.gif);
 margin-left: 100px;
 }
+
+.toolkit-resource {
+width: 300px;
+border-radius: 25px;
+border: 2px solid #C0C0C0;
+margin: 5px;
+}
+
+#toolkit-sidebar {
+float: left;
+width: 300px;
+}
+
+#toolkit-text {
+float: left;
+width: 600px;
+}
+
+#toolkit-body {
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+}

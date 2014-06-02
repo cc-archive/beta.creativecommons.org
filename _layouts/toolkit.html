@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>{{ page.title }} | Creative Commons</title>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+	{% assign resource-topic = page.resource-topic %}
+</head>
+<body>
+{% include header.html %}
+
+<h1>{{ page.title }}</h1>
+
+<div id="toolkit-body">
+<div id="toolkit-text">
+{{content}}
+</div>
+
+<div id="toolkit-sidebar">
+
+	{% for i in (1..2) %}
+		{% for page in site.pages %}
+			{% if page.layout == 'resource' %}
+				{% if page.weight == i %}
+					{% if page.topic contains resource-topic %}
+						<a href="{{ page.permalink }}">
+							<div class="toolkit-resource">
+								<p align="center">
+								<img src="{{ page.image-thumb }}" width=200 height=150>
+								<br />{{ page.blurb }}
+								</p>
+							</div>
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+
+</div>
+
+</div>
+
+<div style="clear: both; " />
+
+</body>
+</html>
