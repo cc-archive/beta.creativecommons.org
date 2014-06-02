@@ -16,10 +16,10 @@
 
 <div id="toolkit-sidebar">
 
-	{% for i in (1..2) %}
+	{% for i in (1..16) %}
 		{% for page in site.pages %}
 			{% if page.layout == 'resource' %}
-				{% if page.weight == i %}
+				{% if page.featured == i %}
 					{% if page.topic contains resource-topic %}
 						<a href="{{ page.permalink }}">
 							<div class="toolkit-resource">
@@ -29,6 +29,27 @@
 								</p>
 							</div>
 					{% endif %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+			
+
+	{% for i in (1..2) %}
+		{% for page in site.pages %}
+			{% if page.layout == 'resource' %}
+				{% if page.weight == i %}
+					{% unless page.featured %}
+						{% if page.topic contains resource-topic %}
+							<a href="{{ page.permalink }}">
+								<div class="toolkit-resource">
+									<p align="center">
+									<img src="{{ page.image-thumb }}" width=200 height=150>
+									<br />{{ page.blurb }}
+									</p>
+								</div>
+						{% endif %}
+					{% endunless %}
 				{% endif %}
 			{% endif %}
 		{% endfor %}
